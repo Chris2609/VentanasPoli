@@ -3,6 +3,8 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import vista.GestionarActividades;
+import vista.GestionarUsuarios;
 import vista.Principal;
 
 public class ControladorPrincipal implements ActionListener{
@@ -18,7 +20,7 @@ public class ControladorPrincipal implements ActionListener{
 	}
 
 	public void inicializar() {
-		ventanaP.setTitle("Desktop");
+		ventanaP.setTitle("Gestor Polideportivo");
 		ventanaP.setLocationRelativeTo(null);
 		ventanaP.setVisible(false);
 	}
@@ -27,14 +29,21 @@ public class ControladorPrincipal implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource() == ventanaP.btnGestionarUsuarios) {
-			System.out.println("Has pulsado Gestionar Usuarios");
-		}
-		
-		if(e.getSource() == ventanaP.btnGestionarActividades) {
-			System.out.println("Has pulsado Gestionar Actividades");
-		}
-		
-		if(e.getSource() == ventanaP.btnGestionarInscripciones) {
+			
+			GestionarUsuarios gestorU = new GestionarUsuarios();
+			ControladorGestionarU controladorU = new ControladorGestionarU(gestorU);
+			controladorU.inicializar();
+			gestorU.setVisible(true);
+			
+		} else if(e.getSource() == ventanaP.btnGestionarActividades) {
+			
+			GestionarActividades gestorAct = new GestionarActividades();
+			ControladorGestionarAct controladorAct = new ControladorGestionarAct(gestorAct);
+			controladorAct.inicializar();
+			gestorAct.setVisible(true);
+			
+		}else if(e.getSource() == ventanaP.btnGestionarInscripciones) {
+			
 			System.out.println("Has pulsado Gestionar Inscripciones");
 		}
 	}

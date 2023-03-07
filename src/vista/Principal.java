@@ -45,28 +45,16 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		
 		btnGestionarUsuarios = new JButton("Gestionar Usuarios");
-		btnGestionarUsuarios.setBounds(140, 14, 147, 40);
-		btnGestionarUsuarios.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnGestionarUsuarios.setBounds(138, 49, 175, 40);
 		contentPane.setLayout(null);
 		contentPane.add(btnGestionarUsuarios);
 		
 		btnGestionarActividades = new JButton("Gestionar Actividades");
-		btnGestionarActividades.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnGestionarActividades.setBounds(140, 101, 147, 40);
+		btnGestionarActividades.setBounds(126, 100, 199, 40);
 		contentPane.add(btnGestionarActividades);
 		
 		btnGestionarInscripciones = new JButton("Gestionar Inscripciones");
-		btnGestionarInscripciones.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnGestionarInscripciones.setBounds(140, 177, 147, 40);
+		btnGestionarInscripciones.setBounds(92, 157, 268, 40);
 		contentPane.add(btnGestionarInscripciones);
 	}
 }

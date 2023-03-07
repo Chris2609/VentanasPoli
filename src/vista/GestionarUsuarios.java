@@ -12,19 +12,21 @@ import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class GestionarUsuario extends JDialog {
+public class GestionarUsuarios extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 	private JTextField textNombreApe;
 	private JTextField textDNI;
 	private JTextField textCodigo;
+	public JButton insertar;
+	public JButton cancelButton;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		try {
-			GestionarUsuario dialog = new GestionarUsuario();
+			GestionarUsuarios dialog = new GestionarUsuarios();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -35,7 +37,7 @@ public class GestionarUsuario extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public GestionarUsuario() {
+	public GestionarUsuarios() {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -76,17 +78,17 @@ public class GestionarUsuario extends JDialog {
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
-				JButton okButton = new JButton("Insertar");
-				okButton.addActionListener(new ActionListener() {
+				insertar = new JButton("Insertar");
+				insertar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 					}
 				});
-				okButton.setActionCommand("OK");
-				buttonPane.add(okButton);
-				getRootPane().setDefaultButton(okButton);
+				insertar.setActionCommand("OK");
+				buttonPane.add(insertar);
+				getRootPane().setDefaultButton(insertar);
 			}
 			{
-				JButton cancelButton = new JButton("Volver");
+				cancelButton = new JButton("Volver");
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
 			}
