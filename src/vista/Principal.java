@@ -12,7 +12,10 @@ import java.awt.event.ActionEvent;
 public class Principal extends JFrame {
 
 	private JPanel contentPane;
-
+	public JButton btnGestionarUsuarios; 
+	public JButton btnGestionarActividades;
+	public JButton btnGestionarInscripciones;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -41,7 +44,7 @@ public class Principal extends JFrame {
 
 		setContentPane(contentPane);
 		
-		JButton btnGestionarUsuarios = new JButton("Gestionar Usuarios");
+		btnGestionarUsuarios = new JButton("Gestionar Usuarios");
 		btnGestionarUsuarios.setBounds(140, 14, 147, 40);
 		btnGestionarUsuarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -50,7 +53,7 @@ public class Principal extends JFrame {
 		contentPane.setLayout(null);
 		contentPane.add(btnGestionarUsuarios);
 		
-		JButton btnGestionarActividades = new JButton("Gestionar Actividades");
+		btnGestionarActividades = new JButton("Gestionar Actividades");
 		btnGestionarActividades.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -58,7 +61,7 @@ public class Principal extends JFrame {
 		btnGestionarActividades.setBounds(140, 101, 147, 40);
 		contentPane.add(btnGestionarActividades);
 		
-		JButton btnGestionarInscripciones = new JButton("Gestionar Inscripciones");
+		btnGestionarInscripciones = new JButton("Gestionar Inscripciones");
 		btnGestionarInscripciones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
