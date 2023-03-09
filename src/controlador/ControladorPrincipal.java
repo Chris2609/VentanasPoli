@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import vista.GestionarActividades;
+import vista.GestionarInscripciones;
 import vista.GestionarUsuarios;
 import vista.Principal;
 
@@ -44,7 +45,11 @@ public class ControladorPrincipal implements ActionListener{
 			
 		}else if(e.getSource() == ventanaP.btnGestionarInscripciones) {
 			
-			System.out.println("Has pulsado Gestionar Inscripciones");
+			GestionarInscripciones gestorIns = new GestionarInscripciones();
+			ControladorGestionarIns controladorIns = new ControladorGestionarIns(gestorIns);
+			controladorIns.inicializar();
+			gestorIns.setVisible(true);
+			
 		}
 	}
 	
